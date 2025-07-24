@@ -71,7 +71,7 @@ function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
     text = `Para la persona mas importante de mi vida <3:\n\nHoy no es una fecha especial en el calendario, pero para mí siempre es especial tenerte en mi vida.\n
-Desde que llegaste supe que eras alguien único.Tu sonrisa, tu forma de hablar, de mirar, de hacerme sentir, todo en ti tiene algo que me atrapa y me da paz.\n\nGracias por estar conmigo, por escucharme,por entender incluso lo que no digo,por regalarme tu tiempo, tu ternura,y por llenar mis días con tu luz.
+Desde que llegaste supe que eras alguien única.Tu sonrisa, tu forma de hablar, de mirar, de hacerme sentir, todo en ti tiene algo que me atrapa y me da paz.\n\nGracias por estar conmigo, por escucharme,por entender incluso lo que no digo,por regalarme tu tiempo, tu ternura,y por llenar mis días con tu luz.
 
 \n\nTe Amo más de lo que las palabras pueden expresar.`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
