@@ -70,8 +70,10 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `Para una de las personas más importantes de mi vida <3:\n\nHoy es un día especial porque te celebro un año mas de vida.\n
-Desde que te conocí supe que eres una persona única. Tu alegría, tu forma de ser, y todo lo que transmites haces que yo me sienta en casa.\n\nGracias por estar ami lado, por tratarme bien  sin condiciones, por darte cuenta de lo que siento incluso cuando me quedo callado, y por llenar mis días con tu energía y cariño.\n\nTe Quiero más de lo que las palabras pueden expresar.`;  } else {
+    text = `Para la persona mas importante de mi vida <3:\n\nHoy no es una fecha especial en el calendario, pero para mí siempre es especial tenerte en mi vida.\n
+Desde que llegaste supe que eras alguien único.Tu sonrisa, tu forma de hablar, de mirar, de hacerme sentir, todo en ti tiene algo que me atrapa y me da paz.\n\nGracias por estar conmigo, por escucharme,por entender incluso lo que no digo,por regalarme tu tiempo, tu ternura,y por llenar mis días con tu luz.
+
+\n\nTe Amo más de lo que las palabras pueden expresar.`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
@@ -147,8 +149,8 @@ function showCountdown() {
   const container = document.getElementById('countdown');
   let startParam = getURLParam('start');
   let eventParam = getURLParam('event');
-  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2004-06-27T00:00:00'); 
-  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2026-06-27T00:00:00');
+  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2025-07-08T00:00:00'); 
+  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2026-07-08T00:00:00');
 
   function update() {
     const now = new Date();
@@ -161,8 +163,8 @@ function showCountdown() {
     let eventSeconds = Math.max(0, Math.floor((eventDiff / 1000) % 60));
 
     container.innerHTML =
-      `Dias de vida: <b>${days}</b> días<br>` +
-      `Proximo cumpleaños: <b>${eventDays}d ${eventHours}h ${eventMinutes}m ${eventSeconds}s ㅤㅤㅤㅤㅤㅤㅤFELIZ CUMPLEAÑOS MIRE ❤️</b>`;
+      `Dias Juntos: <b>${days}</b> días<br>` +
+      `Primer Aniversario: <b>${eventDays}d ${eventHours}h ${eventMinutes}m ${eventSeconds}s</b>`;
     container.classList.add('visible');
   }
   update();
